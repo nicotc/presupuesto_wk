@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Presupuesto extends Model
 {
     use HasFactory;
-    protected $table = 'yidn2_fv_entry_meta';
+    protected $table = 'yIDN2_fv_entry_meta';
 
    protected $fillable = [
         'id',
