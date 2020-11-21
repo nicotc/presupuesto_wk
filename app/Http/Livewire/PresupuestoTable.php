@@ -13,13 +13,13 @@ class PresupuestoTable extends Component
 
         $row = [];
         $Presupuesto = Presupuesto::select(
-            'yidn2_fv_entry_meta.data_id',
-            'yidn2_fv_entry_meta.meta_key',
-            'yidn2_fv_entry_meta.meta_value',
+            'yIDN2_fv_entry_meta.data_id',
+            'yIDN2_fv_entry_meta.meta_key',
+            'yIDN2_fv_entry_meta.meta_value',
             'presupuesto_status.presupuesto',
             'presupuesto_status.status'
         )
-        ->leftJoin('presupuesto_status', 'yidn2_fv_entry_meta.data_id', '=', 'presupuesto_status.presupuesto_id')
+        ->leftJoin('presupuesto_status', 'yIDN2_fv_entry_meta.data_id', '=', 'presupuesto_status.presupuesto_id')
         ->get();
 
 
