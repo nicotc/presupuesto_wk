@@ -4,9 +4,11 @@ namespace App\Http\Livewire;
 
 use Livewire\Component;
 use App\Models\Presupuesto;
+use Illuminate\Support\Collection;
 class PresupuestoTable extends Component
 {
 
+    public $buscar = "";
 
     public function render()
     {
@@ -20,6 +22,7 @@ class PresupuestoTable extends Component
             'presupuesto_status.status'
         )
         ->leftJoin('presupuesto_status', 'yIDN2_fv_entry_meta.data_id', '=', 'presupuesto_status.presupuesto_id')
+        ->orderByDesc('data_id')
         ->get();
 
 
@@ -38,7 +41,22 @@ class PresupuestoTable extends Component
             }
 
         }
-        $presupuesto = $row;
+        $buscar = $this->buscar;
+        $presupuesto = collect($row)
+            ->filter(function ($item) use ($buscar) {
+                if (strlen($buscar)>1) {
+                    return false !== (
+                        stristr($item['nombre'], $buscar) or
+                        stristr($item['problema'], $buscar)
+                    );
+                }else{
+                    return true;
+                }
+        });
+        //  ->where('nombre','LIKE', "%{$this->buscar}%");
+
+// dd($presupuesto);
+        // $presupuesto = $row;
 
         return view('livewire.presupuesto-table', ['presupuesto' =>$presupuesto] );
     }
