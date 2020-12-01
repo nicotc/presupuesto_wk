@@ -102,6 +102,10 @@
 
                     </td>
                     <td style="background: honeydew">
+                    <form method="POST" action="/PresupuestosStatus/{{$row[0]['data_id']}}" accept-charset="UTF-8">
+                        {!!  Form::token() !!}
+
+                        <input name="_method" type="hidden" value="PATCH">
                         <table class="min-w-full divide-y">
                             <tr>
                                 <td>
@@ -117,7 +121,7 @@
                                     <label style="padding: 25px"> Estado</label>
                                 </td>
                                 <td style="padding: 25px">
-                                    <select name="presupuesto">
+                                    <select name="estatus">
                                         <option value="1">Sin Presupuestar</option>
                                         <option value="2">Presupuesto enviado</option>
                                         <option value="3">Mas informacion</option>
@@ -133,13 +137,15 @@
                                     {!! Form::button('Editar', [
                                         'type' => 'submit',
                                         'class' => 'inline-flex items-center px-4 py-2 bg-gray-800 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-gray-700 active:bg-gray-900 focus:outline-none focus:border-gray-900 focus:shadow-outline-gray disabled:opacity-25 transition ease-in-out duration-150 ml-4',
-                                        'onclick' => "return confirm('Are you sure?')"]) !!}
+                                        // 'onclick' => "return confirm('Are you sure?')"
+                                        ]) !!}
                             </tr>
 
 
 
                             </tr>
                         </table>
+                        {!! Form::close() !!}
                     </td>
                 </tr>
 

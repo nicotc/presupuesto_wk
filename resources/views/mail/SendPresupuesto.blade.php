@@ -20,8 +20,26 @@
  <body>
   <br />
   <div class="container box" style="width: 970px;">
-   <h1 style="text-align:center;"> {{ $data['name'] }} </h1>
-   <h3 align="center">{{ $data['message'] }}</h3>
+ <p>
+    Hola,
+</p>
+<p>
+En primer lugar darte las gracias por ponerte en contacto con nosotros para el arreglo de tu equipación.
+</p>
+<p>
+Con la información que nos has facilitado estimamos que podemos llevar a cabo el arreglo y tendrá un coste de
+{{ $msg }} €
+</p>
+<p>
+El precio indicado es final e incluye el servicio de transporte RECOGIDA / ENTREGA donde tu nos digas.
+</p>
+<p>
+En el caso de que estuvieras interésado simplemente responde a este email y estaremos encantados de detallarte como haríamos el arreglo, como tramitaríamos la recogida del mismo y como podrías hacer el pago.
+</p>
+<p>
+Un saludo!
+</p>
+
   </div>
  </body>
 </html>

@@ -11,6 +11,7 @@ class SendMoreInfo extends Mailable
 {
     use Queueable, SerializesModels;
 
+    public $subject = "FALTA INFORMACIÓN";
     /**
      * Create a new message instance.
      *

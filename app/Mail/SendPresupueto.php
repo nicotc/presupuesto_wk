@@ -10,15 +10,16 @@ use Illuminate\Queue\SerializesModels;
 class SendPresupueto extends Mailable
 {
     use Queueable, SerializesModels;
-
+    public $subject = "PRESUPUESTO ENVIADO";
+    public $msg ;
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct($msg)
     {
-        //
+        $this->msg = $msg;
     }
 
     /**

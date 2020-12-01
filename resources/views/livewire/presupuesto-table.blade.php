@@ -30,6 +30,9 @@ class="form-input rounded-md shadow-sm mt-1 block w-full"
                             Presupuesto
                         </th>
                         <th class="px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">
+                            Status
+                        </th>
+                        <th class="px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">
                             Acción
                         </th>
 
@@ -81,12 +84,16 @@ class="form-input rounded-md shadow-sm mt-1 block w-full"
                             {{$row['presupuesto']}}
                         </td>
                         <td class="px-6 py-4 whitespace-no-wrap">
+                            {{$row['status']}}
+                        </td>
+                        <td class="px-6 py-4 whitespace-no-wrap">
                             {!! Form::open(['route' => ['PresupuestosStatus.edit', $row['data_id']], 'method' => 'GET']) !!}
 
                              {!! Form::button('Editar', [
                                 'type' => 'submit',
                                 'class' => 'inline-flex items-center px-4 py-2 bg-gray-800 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-gray-700 active:bg-gray-900 focus:outline-none focus:border-gray-900 focus:shadow-outline-gray disabled:opacity-25 transition ease-in-out duration-150 ml-4',
-                                'onclick' => "return confirm('Are you sure?')"]) !!}
+                                // 'onclick' => "return confirm('Are you sure?')"
+                                ]) !!}
 
                              {{-- <button type="submit" class="inline-flex items-center px-4 py-2 bg-gray-800 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-gray-700 active:bg-gray-900 focus:outline-none focus:border-gray-900 focus:shadow-outline-gray disabled:opacity-25 transition ease-in-out duration-150 ml-4">
                                 Editar

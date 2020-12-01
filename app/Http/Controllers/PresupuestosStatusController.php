@@ -2,8 +2,14 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use App\Mail\SendMoreInfo;
+use App\Mail\SendPresupueto;
 use App\Models\Presupuesto;
+use Illuminate\Http\Request;
+use App\Models\PresupuestoStatus;
+use Illuminate\Support\Facades\Mail;
+
+
 class PresupuestosStatusController extends Controller
 {
 
@@ -80,7 +86,6 @@ class PresupuestosStatusController extends Controller
             if(isset($arr['problema'])){
                 $row[] = $arr;
             }
-
         }
 
         return view('layouts.edit', ['header' => 'Editar', 'row' => $row]);
@@ -95,8 +100,41 @@ class PresupuestosStatusController extends Controller
      *
      * @return Response
      */
-    public function update($id, UpdateGenderRequest $request)
+    public function update($id, Request $request)
     {
+
+        $input = $request->all();
+
+       $id_pre = PresupuestoStatus::select(
+            'id',
+            'presupuesto_id',
+            'presupuesto',
+            'status'
+        )->where('presupuesto_id', '=', $id)->first();
+
+        if($id_pre != null){
+          $presupuesto = PresupuestoStatus::where('presupuesto_id', '=', $id)
+          ->update([
+              'status' => $input['estatus'],
+              'presupuesto' => $input['presupuesto']
+          ]);
+        }else{
+            $presupuesto = new PresupuestoStatus;
+            $presupuesto->presupuesto_id = $id;
+            $presupuesto->status = $input['estatus'];
+            $presupuesto->presupuesto = $input['presupuesto'];
+            $presupuesto->save();
+        }
+
+        if($input['estatus'] == 3){
+            Mail::to('nicotestagrossa@gmail.com')->send(new SendMoreInfo );
+        }
+        if ($input['estatus'] == 2) {
+            $message = $input['presupuesto'];
+            Mail::to('nicotestagrossa@gmail.com')->send(new SendPresupueto($message) );
+        }
+
+        return redirect()->route('dashboard');
 
     }
 

@@ -20,8 +20,29 @@
  <body>
   <br />
   <div class="container box" style="width: 970px;">
-   <h1 style="text-align:center;"> {{ $data['name'] }} </h1>
-   <h3 align="center">{{ $data['message'] }}</h3>
+<p>Hola,</p>
+<p>
+En primer lugar darte las gracias por ponerte en contacto con nosotros para el arreglo de tu equipación.
+</p>
+<p>
+Para poder darte un presupuesto correcto necesitamos algo más información sobre lo que necesitas ya que con la información que nos has dado nos resulta difícil valorar el trabajo.
+</p>
+<p>
+-Si estas pidiendo presupuesto para un ajuste de talla necesitaríamos fotos  tuyas con la prenda puesta para poder ver exactamente las zonas donde tienes problemas.
+</p>
+<p>
+-Si estas pidiendo presupuesto para arreglar arrastrones o daños, necesitamos fotos claras de todas las zonas dañadas.
+</p>
+<p>
+-Si estas pidiendo presupuesto para personalizar con logos, necesitamos que nos concretes exactamente el número de logos que quieres incluir.
+</p>
+<p>
+Esperamos tu respuesta.
+</p>
+<p>
+Un saludo!
+</p>
+
   </div>
  </body>
 </html>

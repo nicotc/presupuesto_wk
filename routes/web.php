@@ -13,6 +13,8 @@ Route::get('/', function () {
 
 Route::resource('PresupuestosStatus', PresupuestosStatusController::class);
 
-Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', PresupuestoTable::class )->name('dashboard');
+Route::middleware(['auth:sanctum', 'verified'])
+->get('/dashboard', PresupuestoTable::class )
+->name('dashboard');
 
 
