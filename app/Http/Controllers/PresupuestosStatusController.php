@@ -127,7 +127,7 @@ class PresupuestosStatusController extends Controller
         }
 
         if($input['estatus'] == 3){
-            Mail::to('nicotestagrossa@gmail.com')->send(new SendMoreInfo );
+            Mail::to('nicotestagrossa@gmail.com')->send(new SendMoreInfo() );
         }
         if ($input['estatus'] == 2) {
             $message = $input['presupuesto'];
