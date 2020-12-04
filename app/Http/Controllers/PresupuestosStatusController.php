@@ -2,8 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Mail\SendMoreInfo;
-use App\Mail\SendPresupueto;
+
 use App\Models\Presupuesto;
 use Illuminate\Http\Request;
 use App\Models\PresupuestoStatus;
@@ -128,11 +127,11 @@ class PresupuestosStatusController extends Controller
 
         if($input['estatus'] == 3){
             $msg = '';
-            Mail::to('nicotestagrossa@gmail.com')->send(new SendMoreInfo($msg) );
+            Mail::to('nicotestagrossa@gmail.com')->send(new \App\Mail\SendMoreInfo($msg) );
         }
         if ($input['estatus'] == 2) {
             $message = $input['presupuesto'];
-            Mail::to('nicotestagrossa@gmail.com')->send(new SendPresupueto($message) );
+            Mail::to('nicotestagrossa@gmail.com')->send(new \App\Mail\SendPresupueto($message) );
         }
 
         return redirect()->route('dashboard');
