@@ -7,6 +7,8 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 
+
+
 class SendMoreInfo extends Mailable
 {
     use Queueable, SerializesModels;
@@ -29,6 +31,6 @@ class SendMoreInfo extends Mailable
      */
     public function build()
     {
-        return $this->view('Mail.SendMoreInfo');
+        return $this->view('mail.SendMoreInfo');
     }
 }

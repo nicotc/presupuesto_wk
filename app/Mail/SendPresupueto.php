@@ -29,6 +29,6 @@ class SendPresupueto extends Mailable
      */
     public function build()
     {
-        return $this->view('Mail.SendPresupuesto');
+        return $this->view('mail.SendPresupuesto');
     }
 }
