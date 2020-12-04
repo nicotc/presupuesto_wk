@@ -10,16 +10,16 @@ use Illuminate\Queue\SerializesModels;
 class SendMoreInfo extends Mailable
 {
     use Queueable, SerializesModels;
-
+    public $msg ;
     public $subject = "FALTA INFORMACIÓN";
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct($msg)
     {
-        //
+        $this->msg = $msg;
     }
 
     /**
