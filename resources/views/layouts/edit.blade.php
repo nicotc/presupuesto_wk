@@ -107,12 +107,13 @@
 
                         <input name="_method" type="hidden" value="PATCH">
                         <table class="min-w-full divide-y">
+                            <input type="hidden" value="{{$row[0]['email']}}" name='email'>
                             <tr>
                                 <td>
                                     <label style="padding: 25px">Presupuesto</label>
                                 </td>
                                 <td style="padding: 25px">
-                                   <input type="text" value=" {{$row[0]['presupuesto']}}" name='presupuesto'>
+                                   <input type="text" value="{{$row[0]['presupuesto']}}" name='presupuesto'>
                                 </td>
 
                             </tr>
@@ -122,10 +123,31 @@
                                 </td>
                                 <td style="padding: 25px">
                                     <select name="estatus">
-                                        <option value="1">Sin Presupuestar</option>
-                                        <option value="2">Presupuesto enviado</option>
-                                        <option value="3">Mas informacion</option>
-                                        <option value="4">Presupuesto aprobado</option>
+                                         <?php
+                                        if($row[0]['status'] == 1){
+                                            echo "<option selected value='1'>Sin Presupuestar</option>";
+                                        }else{
+                                            echo "<option value='1'>Sin Presupuestar</option>";
+                                        }
+
+                                        if($row[0]['status'] == 2){
+                                            echo "<option selected value='2'>Presupuesto enviado</option>";
+                                        }else{
+                                            echo "<option value='2'>Presupuesto enviado</option>";
+                                        }
+
+                                        if($row[0]['status'] == 3){
+                                            echo "<option selected value='3'>Mas informacion</option>";
+                                        }else{
+                                            echo "<option value='3'>Mas informacion</option>";
+                                        }
+                                        if($row[0]['status'] == 4){
+                                            echo "<option selected value='4'>Presupuesto aprobado</option>";
+                                        }else{
+                                            echo "<option value='4'>Presupuesto aprobado</option>";
+                                        }
+
+?>
                                     </select>
                                 </td>
                             </tr>

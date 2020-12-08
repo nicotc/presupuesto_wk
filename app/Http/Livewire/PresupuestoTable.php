@@ -25,15 +25,22 @@ class PresupuestoTable extends Component
         ->orderByDesc('data_id')
         ->get();
 
+        $st[1] = "Sin Presupuestar";
+        $st[2] = "Presupuesto enviado";
+        $st[3] = "Mas informacion";
+        $st[4] = "Presupuesto aprobado";
 
 
         // dd($Presupuesto);
 
         foreach ($Presupuesto as $presupuesto) {
+            if($presupuesto['status'] == '' ){
+                $presupuesto['status'] = 1;
+            }
             $Arr[$presupuesto['data_id']][$presupuesto['meta_key']] = $presupuesto['meta_value'];
             $Arr[$presupuesto['data_id']]['data_id'] = $presupuesto['data_id'];
             $Arr[$presupuesto['data_id']]['presupuesto'] = $presupuesto['presupuesto'];
-            $Arr[$presupuesto['data_id']]['status'] = $presupuesto['status'];
+            $Arr[$presupuesto['data_id']]['status'] = $st[$presupuesto['status']];
         }
         foreach ($Arr as $arr) {
             if(isset($arr['problema'])){
@@ -47,7 +54,8 @@ class PresupuestoTable extends Component
                 if (strlen($buscar)>1) {
                     return false !== (
                         stristr($item['nombre'], $buscar) or
-                        stristr($item['problema'], $buscar)
+                        stristr($item['problema'], $buscar) or
+                        stristr($item['status'], $buscar)
                     );
                 }else{
                     return true;

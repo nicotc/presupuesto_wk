@@ -75,6 +75,12 @@ class PresupuestosStatusController extends Controller
         ->where('data_id', '=',$id )
         ->get();
 
+
+
+
+
+
+
         foreach ($Presupuesto as $presupuesto) {
             $Arr[$presupuesto['data_id']][$presupuesto['meta_key']] = $presupuesto['meta_value'];
             $Arr[$presupuesto['data_id']]['data_id'] = $presupuesto['data_id'];
@@ -127,11 +133,12 @@ class PresupuestosStatusController extends Controller
 
         if($input['estatus'] == 3){
             $msg = '';
-            Mail::to('nicotestagrossa@gmail.com')->send(new \App\Mail\SendMoreInfo($msg) );
+            Mail::to($input['email'])->send(new \App\Mail\SendMoreInfo($msg) );
         }
+
         if ($input['estatus'] == 2) {
             $message = $input['presupuesto'];
-            Mail::to('nicotestagrossa@gmail.com')->send(new \App\Mail\SendPresupueto($message) );
+            Mail::to($input['email'])->send(new \App\Mail\SendPresupueto($message) );
         }
 
         return redirect()->route('dashboard');
