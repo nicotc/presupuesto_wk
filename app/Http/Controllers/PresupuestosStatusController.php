@@ -76,17 +76,13 @@ class PresupuestosStatusController extends Controller
         ->get();
 
 
-
-
-
-
-
         foreach ($Presupuesto as $presupuesto) {
             $Arr[$presupuesto['data_id']][$presupuesto['meta_key']] = $presupuesto['meta_value'];
             $Arr[$presupuesto['data_id']]['data_id'] = $presupuesto['data_id'];
             $Arr[$presupuesto['data_id']]['presupuesto'] = $presupuesto['presupuesto'];
             $Arr[$presupuesto['data_id']]['status'] = $presupuesto['status'];
         }
+        
         foreach ($Arr as $arr) {
             if(isset($arr['problema'])){
                 $row[] = $arr;

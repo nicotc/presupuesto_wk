@@ -30,6 +30,6 @@ class SendMoreInfo3 extends Mailable
      */
     public function build()
     {
-        return $this->view('mail.SendPresupuesto3');
+        return $this->view('mail.SendMoreInfo3');
     }
 }
