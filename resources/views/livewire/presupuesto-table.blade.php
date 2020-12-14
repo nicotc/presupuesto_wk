@@ -40,7 +40,9 @@ class="form-input rounded-md shadow-sm mt-1 block w-full"
                 </thead>
                 <tbody class="bg-white divide-y divide-gray-200">
                     @foreach ($presupuesto as $row)
+                    @if($row['status_n'] == 1)
                     <tr>
+                    @endif
                         <td class="px-6 py-4 whitespace-no-wrap">
                             <div class="flex items-center">
 
@@ -83,15 +85,75 @@ class="form-input rounded-md shadow-sm mt-1 block w-full"
                         <td class="px-6 py-4 whitespace-no-wrap">
                             {{$row['presupuesto']}}
                         </td>
-                        <td class="px-6 py-4 whitespace-no-wrap">
+
+
+
+                   {{-- $st[1] = "Sin Presupuestar";  blanco
+                        $st[2] = "Presupuesto enviado";  amarillo
+                        $st[3] = "Mas informacion";   rojo
+                        $st[4] = "Presupuesto aprobado";  verde --}}
+                        {{-- $st[5] = "Mas informacion 2";
+                        $st[6] = "Mas informacion 3"; --}}
+                        <td
+
+                        {{-- $st[1] = "Sin Presupuestar";  blanco --}}
+                        @if($row['status_n'] == 1)
+                            bgcolor="#ffffff"
+                        @endif
+                        {{-- $st[2] = "Presupuesto enviado";  amarillo --}}
+                        @if($row['status_n'] == 2)
+                            bgcolor="#ffff00"
+                        @endif
+                        {{-- $st[3] = "Mas informacion";   rojo --}}
+                        @if($row['status_n'] == 3)
+                        bgcolor="#FF0000"
+                        @endif
+                        {{-- $st[4] = "Presupuesto aprobado";  verde  --}}
+                        @if($row['status_n'] == 4)
+                            bgcolor="#F4FF00"
+                        @endif
+
+
+                        {{-- $st[5] = "Mas informacion";   rojo --}}
+                        @if($row['status_n'] == 5)
+                            bgcolor="#FF0000"
+                        @endif
+                        {{-- $st[6] = "Mas informacion";   rojo --}}
+                        @if($row['status_n'] == 6)
+                            bgcolor="#FF0000"
+                        @endif
+
+
+
+
+
+     
+
+                         class="px-6 py-4 whitespace-no-wrap">
                             {{$row['status']}}
                         </td>
                         <td class="px-6 py-4 whitespace-no-wrap">
                             {!! Form::open(['route' => ['PresupuestosStatus.edit', $row['data_id']], 'method' => 'GET']) !!}
 
-                             {!! Form::button('Editar', [
+                             {!! Form::button('Estado', [
                                 'type' => 'submit',
-                                'class' => 'inline-flex items-center px-4 py-2 bg-gray-800 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-gray-700 active:bg-gray-900 focus:outline-none focus:border-gray-900 focus:shadow-outline-gray disabled:opacity-25 transition ease-in-out duration-150 ml-4',
+                                'class' => 'inline-flex
+                                items-center
+                                px-4 py-2
+                                 bg-gray-800
+                                 border border-transparent
+                                 rounded-md
+                                 font-semibold
+                                 text-xs
+                                 text-white
+                                 uppercase
+                                 tracking-widest
+                                 hover:bg-gray-700
+                                 active:bg-gray-900
+                                 focus:outline-none
+                                 focus:border-gray-900
+                                 focus:shadow-outline-gray
+                                  disabled:opacity-25 transition ease-in-out duration-150 ml-4',
                                 // 'onclick' => "return confirm('Are you sure?')"
                                 ]) !!}
 

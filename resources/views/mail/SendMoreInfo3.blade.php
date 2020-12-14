@@ -18,25 +18,23 @@
   </style>
  </head>
  <body>
-    {{ $msg['problema'] }}
   <br />
+  {{ $msg['problema'] }}
   <div class="container box" style="width: 970px;">
- <p>
-    Hola,
-</p>
+<p>Hola,</p>
 <p>
 En primer lugar darte las gracias por ponerte en contacto con nosotros para el arreglo de tu equipación.
 </p>
 <p>
-Con la información que nos has facilitado estimamos que podemos llevar a cabo el arreglo y tendrá un coste de
-{{ $msg['presupuesto'] }} €
+Para poder darte un presupuesto correcto necesitamos algo más información sobre lo que necesitas ya que con la información que nos has dado nos resulta difícil valorar el trabajo.
+</p>
+
+<p>
+-Si estas pidiendo presupuesto para personalizar con logos, necesitamos que nos concretes exactamente el número de logos que quieres incluir.
 </p>
 <p>
-El precio indicado es final e incluye el servicio de transporte RECOGIDA / ENTREGA donde tu nos digas.
-</p>
-<p>
-En el caso de que estuvieras interésado simplemente responde a este email y estaremos encantados de detallarte como haríamos el arreglo, como tramitaríamos la recogida del mismo y como podrías hacer el pago.
-</p>
+    Esperamos tu respuesta.
+    </p>
 <p>
 Un saludo!
 </p>

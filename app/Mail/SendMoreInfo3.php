@@ -7,7 +7,7 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 
-class SendPresupueto extends Mailable
+class SendMoreInfo3 extends Mailable
 {
     use Queueable, SerializesModels;
     public $subject = "SOLICITUD DE PRESUPUESTO";
@@ -20,6 +20,7 @@ class SendPresupueto extends Mailable
     public function __construct($msg)
     {
         $this->msg = $msg;
+        //
     }
 
     /**
@@ -29,6 +30,6 @@ class SendPresupueto extends Mailable
      */
     public function build()
     {
-        return $this->view('mail.SendPresupuesto');
+        return $this->view('mail.SendPresupuesto3');
     }
 }

@@ -20,6 +20,7 @@ class PresupuestoTable extends Component
             'yIDN2_fv_entry_meta.meta_value',
             'presupuesto_status.presupuesto',
             'presupuesto_status.status'
+
         )
         ->leftJoin('presupuesto_status', 'yIDN2_fv_entry_meta.data_id', '=', 'presupuesto_status.presupuesto_id')
         ->orderByDesc('data_id')
@@ -29,6 +30,8 @@ class PresupuestoTable extends Component
         $st[2] = "Presupuesto enviado";
         $st[3] = "Mas informacion";
         $st[4] = "Presupuesto aprobado";
+        $st[5] = "Mas informacion 2";
+        $st[6] = "Mas informacion 3";
 
 
         // dd($Presupuesto);
@@ -41,6 +44,7 @@ class PresupuestoTable extends Component
             $Arr[$presupuesto['data_id']]['data_id'] = $presupuesto['data_id'];
             $Arr[$presupuesto['data_id']]['presupuesto'] = $presupuesto['presupuesto'];
             $Arr[$presupuesto['data_id']]['status'] = $st[$presupuesto['status']];
+            $Arr[$presupuesto['data_id']]['status_n'] = $presupuesto['status'];
         }
         foreach ($Arr as $arr) {
             if(isset($arr['problema'])){

@@ -132,13 +132,26 @@ class PresupuestosStatusController extends Controller
         }
 
         if($input['estatus'] == 3){
-            $msg = '';
-            Mail::to($input['email'])->send(new \App\Mail\SendMoreInfo($msg) );
+            $message = $input['problema'];
+            $message['estatus'] = $input['estatus'];
+            Mail::to($input['email'])->send(new \App\Mail\SendMoreInfo($message) );
         }
 
         if ($input['estatus'] == 2) {
-            $message = $input['presupuesto'];
+            $message['presupuesto'] = $input['presupuesto'];
+            $message['problema'] = $input['problema'];
+            $message['estatus'] = $input['estatus'];
             Mail::to($input['email'])->send(new \App\Mail\SendPresupueto($message) );
+        }
+        if ($input['estatus'] == 5) {
+            $message['problema'] = $input['problema'];
+            $message['estatus'] = $input['estatus'];
+            Mail::to($input['email'])->send(new \App\Mail\SendMoreInfo2($message) );
+        }
+        if ($input['estatus'] == 6) {
+            $message['problema']  = $input['problema'];
+            $message['estatus'] = $input['estatus'];
+            Mail::to($input['email'])->send(new \App\Mail\SendMoreInfo3($message) );
         }
 
         return redirect()->route('dashboard');

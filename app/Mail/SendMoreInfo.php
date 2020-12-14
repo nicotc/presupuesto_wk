@@ -13,7 +13,7 @@ class SendMoreInfo extends Mailable
 {
     use Queueable, SerializesModels;
     public $msg ;
-    public $subject = "FALTA INFORMACIÓN";
+    public $subject = "SOLICITUD DE PRESUPUESTO";
     /**
      * Create a new message instance.
      *

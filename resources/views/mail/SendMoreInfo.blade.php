@@ -20,6 +20,10 @@
  <body>
   <br />
   <div class="container box" style="width: 970px;">
+
+
+    {{ $msg['problema'] }}
+
 <p>Hola,</p>
 <p>
 En primer lugar darte las gracias por ponerte en contacto con nosotros para el arreglo de tu equipación.
@@ -31,14 +35,8 @@ Para poder darte un presupuesto correcto necesitamos algo más información sobr
 -Si estas pidiendo presupuesto para un ajuste de talla necesitaríamos fotos  tuyas con la prenda puesta para poder ver exactamente las zonas donde tienes problemas.
 </p>
 <p>
--Si estas pidiendo presupuesto para arreglar arrastrones o daños, necesitamos fotos claras de todas las zonas dañadas.
-</p>
-<p>
--Si estas pidiendo presupuesto para personalizar con logos, necesitamos que nos concretes exactamente el número de logos que quieres incluir.
-</p>
-<p>
-Esperamos tu respuesta.
-</p>
+    Esperamos tu respuesta.
+    </p>
 <p>
 Un saludo!
 </p>

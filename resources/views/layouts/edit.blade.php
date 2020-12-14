@@ -108,6 +108,7 @@
                         <input name="_method" type="hidden" value="PATCH">
                         <table class="min-w-full divide-y">
                             <input type="hidden" value="{{$row[0]['email']}}" name='email'>
+                            <input type="hidden" value="{{$row[0]['problema']}}" name='problema'>
                             <tr>
                                 <td>
                                     <label style="padding: 25px">Presupuesto</label>
@@ -146,6 +147,19 @@
                                         }else{
                                             echo "<option value='4'>Presupuesto aprobado</option>";
                                         }
+
+                                        if($row[0]['status'] == 5){
+                                            echo "<option selected value='5'>Mas informacion 2</option>";
+                                        }else{
+                                            echo "<option value='5'>Mas informacion</option>";
+                                        }
+
+                                        if($row[0]['status'] == 6){
+                                            echo "<option selected value='6'>Mas informacion 3</option>";
+                                        }else{
+                                            echo "<option value='6'>Mas informacion 3</option>";
+                                        }
+
 
 ?>
                                     </select>
