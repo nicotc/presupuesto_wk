@@ -19,10 +19,12 @@ class PresupuestoTable extends Component
             'yIDN2_fv_entry_meta.meta_key',
             'yIDN2_fv_entry_meta.meta_value',
             'presupuesto_status.presupuesto',
-            'presupuesto_status.status'
+            'presupuesto_status.status',
+            'captured'
 
         )
         ->leftJoin('presupuesto_status', 'yIDN2_fv_entry_meta.data_id', '=', 'presupuesto_status.presupuesto_id')
+        ->leftJoin('yIDN2_fv_enteries', 'yIDN2_fv_entry_meta.data_id', '=', 'yIDN2_fv_enteries.id')
         ->orderByDesc('data_id')
         ->get();
 
@@ -45,6 +47,7 @@ class PresupuestoTable extends Component
             $Arr[$presupuesto['data_id']]['presupuesto'] = $presupuesto['presupuesto'];
             $Arr[$presupuesto['data_id']]['status'] = $st[$presupuesto['status']];
             $Arr[$presupuesto['data_id']]['status_n'] = $presupuesto['status'];
+            $Arr[$presupuesto['data_id']]['captured'] = $presupuesto['captured'];
         }
         foreach ($Arr as $arr) {
             if(isset($arr['problema'])){
@@ -59,6 +62,7 @@ class PresupuestoTable extends Component
                     return false !== (
                         stristr($item['nombre'], $buscar) or
                         stristr($item['problema'], $buscar) or
+                        stristr($item['captured'], $buscar) or
                         stristr($item['status'], $buscar)
                     );
                 }else{

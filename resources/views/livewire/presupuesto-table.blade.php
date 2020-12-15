@@ -30,6 +30,9 @@ class="form-input rounded-md shadow-sm mt-1 block w-full"
                             Presupuesto
                         </th>
                         <th class="px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">
+                            Fecha
+                        </th>
+                        <th class="px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">
                             Status
                         </th>
                         <th class="px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">
@@ -85,6 +88,9 @@ class="form-input rounded-md shadow-sm mt-1 block w-full"
                         <td class="px-6 py-4 whitespace-no-wrap">
                             {{$row['presupuesto']}}
                         </td>
+                        <td class="px-6 py-4 whitespace-no-wrap">
+                            {{$row['captured']}}
+                        </td>
 
 
 
@@ -127,7 +133,7 @@ class="form-input rounded-md shadow-sm mt-1 block w-full"
 
 
 
-     
+
 
                          class="px-6 py-4 whitespace-no-wrap">
                             {{$row['status']}}
