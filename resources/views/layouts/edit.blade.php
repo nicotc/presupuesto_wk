@@ -151,7 +151,7 @@
                                         if($row[0]['status'] == 5){
                                             echo "<option selected value='5'>Mas informacion 2</option>";
                                         }else{
-                                            echo "<option value='5'>Mas informacion</option>";
+                                            echo "<option value='5'>Mas informacion 2</option>";
                                         }
 
                                         if($row[0]['status'] == 6){
