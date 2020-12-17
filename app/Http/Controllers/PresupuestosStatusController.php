@@ -82,7 +82,7 @@ class PresupuestosStatusController extends Controller
             $Arr[$presupuesto['data_id']]['presupuesto'] = $presupuesto['presupuesto'];
             $Arr[$presupuesto['data_id']]['status'] = $presupuesto['status'];
         }
-        
+
         foreach ($Arr as $arr) {
             if(isset($arr['problema'])){
                 $row[] = $arr;
@@ -119,6 +119,7 @@ class PresupuestosStatusController extends Controller
               'status' => $input['estatus'],
               'presupuesto' => $input['presupuesto']
           ]);
+
         }else{
             $presupuesto = new PresupuestoStatus;
             $presupuesto->presupuesto_id = $id;
@@ -128,7 +129,7 @@ class PresupuestosStatusController extends Controller
         }
 
         if($input['estatus'] == 3){
-            $message = $input['problema'];
+            $message['problema'] = $input['problema'];
             $message['estatus'] = $input['estatus'];
             Mail::to($input['email'])->send(new \App\Mail\SendMoreInfo($message) );
         }
