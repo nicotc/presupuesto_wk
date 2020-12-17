@@ -36,9 +36,7 @@ Para poder darte un presupuesto correcto necesitamos algo más información sobr
 <p>
     Esperamos tu respuesta.
     </p>
-<p>
-Esperamos tu respuesta.
-</p>
+
 <p>
 Un saludo!
 </p>

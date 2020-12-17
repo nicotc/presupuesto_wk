@@ -23,9 +23,7 @@ class="form-input rounded-md shadow-sm mt-1 block w-full"
                         <th class="px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">
                             problema
                         </th>
-                        <th class="px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">
-                            imagenes
-                        </th>
+
                         <th class="px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">
                             Presupuesto
                         </th>
@@ -66,25 +64,7 @@ class="form-input rounded-md shadow-sm mt-1 block w-full"
                         <td class="px-6 py-4 ">
                             {{$row['problema']}}
                         </td>
-                        <td class="px-6 py-4 whitespace-no-wrap">
-                            @php
-                                 $urls_img = explode( ",", $row['imagenes']);
-                                foreach ($urls_img as $img) {
-                                    if(strlen($img)>0){
-                                        echo '<div class="text-sm leading-5 text-gray-500">';
-                                   echo "<a href='".$img."' target='_blank'> <img src=".$img." width='40'></a>";
-                                   echo '</div>';
-                                    }
 
-                                }
-                                //  dump($urls_img);
-
-
-                            @endphp
-
-
-                            {{-- {{$row['imagenes']}} --}}
-                        </td>
                         <td class="px-6 py-4 whitespace-no-wrap">
                             {{$row['presupuesto']}}
                         </td>
@@ -110,21 +90,21 @@ class="form-input rounded-md shadow-sm mt-1 block w-full"
                         @if($row['status_n'] == 2)
                             bgcolor="#ffff00"
                         @endif
+
+                        {{-- $st[4] = "Presupuesto aprobado";  verde  --}}
+                        @if($row['status_n'] == 4)
+                            bgcolor="#00ff00"
+                        @endif
+
                         {{-- $st[3] = "Mas informacion";   rojo --}}
                         @if($row['status_n'] == 3)
                         bgcolor="#FF0000"
                         @endif
-                        {{-- $st[4] = "Presupuesto aprobado";  verde  --}}
-                        @if($row['status_n'] == 4)
-                            bgcolor="#F4FF00"
-                        @endif
-
-
-                        {{-- $st[5] = "Mas informacion";   rojo --}}
+                        {{-- $st[5] = "Mas informacion 2";   rojo --}}
                         @if($row['status_n'] == 5)
                             bgcolor="#FF0000"
                         @endif
-                        {{-- $st[6] = "Mas informacion";   rojo --}}
+                        {{-- $st[6] = "Mas informacion 3";   rojo --}}
                         @if($row['status_n'] == 6)
                             bgcolor="#FF0000"
                         @endif
