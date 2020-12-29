@@ -35,7 +35,9 @@
     <p>
     Un saludo.
 </p>
+<hr>
 <p>
+
 {{ $msg['problema'] }}
 </p>
   </div>

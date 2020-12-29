@@ -19,7 +19,7 @@
  </head>
  <body>
   <br />
-  <div class="container box" style="width: width: 600px;overflow-x:scroll>
+  <div class="container box" style="width: width: 600px;overflow-x:scroll">
 
 <p>
     Hola,
@@ -35,6 +35,7 @@
     <p>
     Un saludo!
 </p>
+<hr>
 <p>
 {{ $msg['problema'] }}
 </p>

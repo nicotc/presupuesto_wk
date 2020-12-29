@@ -24,6 +24,7 @@
             <p>El precio indicado es final e incluye el servicio de transporte RECOGIDA / ENTREGA donde tu nos digas.</p>
             <p>En el caso de que estuvieras interésado simplemente responde a este email y estaremos encantados de detallarte como haríamos el arreglo, como tramitaríamos la recogida del mismo y como podrías hacer el pago.</p>
             <p>Un saludo!</p>
+            <hr>
             <p>{{ $msg['problema'] }}</p>
         </div>
     </body>
