@@ -17,7 +17,7 @@
     </style>
     </head>
     <body>
-        <div class="container box" style="width:600px; overflow-x:scroll">
+        <div class="container box" style="overflow-x:scroll">
             <p>Hola,</p>
             <p>En primer lugar darte las gracias por ponerte en contacto con nosotros para el arreglo de tu equipación.</p>
             <p>Con la información que nos has facilitado estimamos que podemos llevar a cabo el arreglo y tendrá un coste de {{ $msg['presupuesto'] }} €</p>
