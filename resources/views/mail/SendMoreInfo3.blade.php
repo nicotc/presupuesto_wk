@@ -19,17 +19,17 @@
  </head>
  <body>
 
-  <div class="container box" style="width: auto;">
+  <div class="container box" style="width: 600px;overflow-x:scroll">
 <p>
     Hola,
 </p>
 <p>
-    En primer lugar darte las gracias por ponerte en contacto con nosotros para el arreglo de tu equipación. 
+    En primer lugar darte las gracias por ponerte en contacto con nosotros para el arreglo de tu equipación.
 </p>
-    <p>  
+    <p>
     Después de analizar tu solicitud de presupuesto lamento informarte que este tipo de trabajos no los estamos haciendo ahora mismo y por tanto no podemos ofrecerte un solución.
 </p>
-    <p> 
+    <p>
     Lo siento mucho.
 </p>
     <p>

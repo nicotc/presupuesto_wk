@@ -19,7 +19,7 @@
  </head>
  <body>
   <br />
-  <div class="container box" style="width: auto;">
+  <div class="container box" style="width: width: 600px;overflow-x:scroll>
 
 <p>
     Hola,
