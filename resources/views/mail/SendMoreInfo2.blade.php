@@ -19,7 +19,7 @@
  </head>
  <body>
 
-  <div class="container box" style="width: 970px;">
+  <div class="container box" style="width: auto;">
     <p>
     Hola,
     </p>

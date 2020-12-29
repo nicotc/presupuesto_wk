@@ -19,23 +19,23 @@
  </head>
  <body>
   <br />
-  <div class="container box" style="width: 970px;">
+  <div class="container box" style="width: auto;">
 
 <p>
     Hola,
 </p>
 <p>
-    En primer lugar darte las gracias por ponerte en contacto con nosotros para el arreglo de tu equipación. 
-</p>  
+    En primer lugar darte las gracias por ponerte en contacto con nosotros para el arreglo de tu equipación.
+</p>
     Para poder darte un presupuesto correcto necesitamos algo más información.
-    <p>  
+    <p>
     Al ser un AJUSTE DE TALLA lo que necesitaríamos son fotos tuyas con la prenda puesta para poder ver exactamente  donde tienes el problema y poder darte un presupuesto exacto.
 </p>
     Puedes responder a este email adjuntándolas.
-    <p>  
+    <p>
     Un saludo!
 </p>
-<p> 
+<p>
 {{ $msg['problema'] }}
 </p>
   </div>
