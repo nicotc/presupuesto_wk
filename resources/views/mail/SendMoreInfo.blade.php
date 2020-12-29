@@ -21,26 +21,23 @@
   <br />
   <div class="container box" style="width: 970px;">
 
-
-    {{ $msg['problema'] }}
-
-<p>Hola,</p>
 <p>
-En primer lugar darte las gracias por ponerte en contacto con nosotros para el arreglo de tu equipación.
+    Hola,
 </p>
 <p>
-Para poder darte un presupuesto correcto necesitamos algo más información sobre lo que necesitas ya que con la información que nos has dado nos resulta difícil valorar el trabajo.
+    En primer lugar darte las gracias por ponerte en contacto con nosotros para el arreglo de tu equipación. 
+</p>  
+    Para poder darte un presupuesto correcto necesitamos algo más información.
+    <p>  
+    Al ser un AJUSTE DE TALLA lo que necesitaríamos son fotos tuyas con la prenda puesta para poder ver exactamente  donde tienes el problema y poder darte un presupuesto exacto.
 </p>
-<p>
--Si estas pidiendo presupuesto para un ajuste de talla necesitaríamos fotos  tuyas con la prenda puesta para poder ver exactamente las zonas donde tienes problemas.
+    Puedes responder a este email adjuntándolas.
+    <p>  
+    Un saludo!
 </p>
-<p>
-    Esperamos tu respuesta.
-    </p>
-<p>
-Un saludo!
+<p> 
+{{ $msg['problema'] }}
 </p>
-
   </div>
  </body>
 </html>

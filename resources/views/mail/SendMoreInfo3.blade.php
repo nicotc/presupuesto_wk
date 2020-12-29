@@ -18,27 +18,26 @@
   </style>
  </head>
  <body>
-  <br />
-  {{ $msg['problema'] }}
+
   <div class="container box" style="width: 970px;">
-<p>Hola,</p>
 <p>
-En primer lugar darte las gracias por ponerte en contacto con nosotros para el arreglo de tu equipación.
+    Hola,
 </p>
 <p>
-Para poder darte un presupuesto correcto necesitamos algo más información sobre lo que necesitas ya que con la información que nos has dado nos resulta difícil valorar el trabajo.
+    En primer lugar darte las gracias por ponerte en contacto con nosotros para el arreglo de tu equipación. 
 </p>
-
-<p>
--Si estas pidiendo presupuesto para personalizar con logos, necesitamos que nos concretes exactamente el número de logos que quieres incluir.
+    <p>  
+    Después de analizar tu solicitud de presupuesto lamento informarte que este tipo de trabajos no los estamos haciendo ahora mismo y por tanto no podemos ofrecerte un solución.
+</p>
+    <p> 
+    Lo siento mucho.
+</p>
+    <p>
+    Un saludo.
 </p>
 <p>
-    Esperamos tu respuesta.
-    </p>
-<p>
-Un saludo!
+{{ $msg['problema'] }}
 </p>
-
   </div>
  </body>
 </html>

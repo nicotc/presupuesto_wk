@@ -30,10 +30,10 @@ class PresupuestoTable extends Component
 
         $st[1] = "Sin Presupuestar";
         $st[2] = "Presupuesto enviado";
-        $st[3] = "Mas informacion";
+        $st[3] = "FOTOS TALLA";
         $st[4] = "Presupuesto aprobado";
-        $st[5] = "Mas informacion 2";
-        $st[6] = "Mas informacion 3";
+        $st[5] = "FOTOS ARRASTRON ";
+        $st[6] = "IRREPARABLE";
 
 
         // dd($Presupuesto);

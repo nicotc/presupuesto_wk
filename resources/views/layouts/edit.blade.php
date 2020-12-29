@@ -138,9 +138,9 @@
                                         }
 
                                         if($row[0]['status'] == 3){
-                                            echo "<option selected value='3'>Mas informacion</option>";
+                                            echo "<option selected value='3'> FOTOS TALLA</option>";
                                         }else{
-                                            echo "<option value='3'>Mas informacion</option>";
+                                            echo "<option value='3'> FOTOS TALLA</option>";
                                         }
                                         if($row[0]['status'] == 4){
                                             echo "<option selected value='4'>Presupuesto aprobado</option>";
@@ -149,15 +149,15 @@
                                         }
 
                                         if($row[0]['status'] == 5){
-                                            echo "<option selected value='5'>Mas informacion 2</option>";
+                                            echo "<option selected value='5'>FOTOS ARRASTRON</option>";
                                         }else{
-                                            echo "<option value='5'>Mas informacion 2</option>";
+                                            echo "<option value='5'>FOTOS ARRASTRON</option>";
                                         }
 
                                         if($row[0]['status'] == 6){
-                                            echo "<option selected value='6'>Mas informacion 3</option>";
+                                            echo "<option selected value='6'>IRREPARABLE</option>";
                                         }else{
-                                            echo "<option value='6'>Mas informacion 3</option>";
+                                            echo "<option value='6'>IRREPARABLE</option>";
                                         }
 
 

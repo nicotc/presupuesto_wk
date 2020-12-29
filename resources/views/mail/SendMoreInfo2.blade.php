@@ -18,29 +18,29 @@
   </style>
  </head>
  <body>
-    {{ $msg['problema'] }}
-    <br />
 
   <div class="container box" style="width: 970px;">
-<p>Hola,</p>
-<p>
-En primer lugar darte las gracias por ponerte en contacto con nosotros para el arreglo de tu equipación.
-</p>
-<p>
-Para poder darte un presupuesto correcto necesitamos algo más información sobre lo que necesitas ya que con la información que nos has dado nos resulta difícil valorar el trabajo.
-</p>
-
-<p>
--Si estas pidiendo presupuesto para arreglar arrastrones o daños, necesitamos fotos claras de todas las zonas dañadas.
-</p>
-<p>
-    Esperamos tu respuesta.
+    <p>
+    Hola,
     </p>
-
-<p>
-Un saludo!
-</p>
-
+    <p>
+    En primer lugar darte las gracias por ponerte en contacto con nosotros para el arreglo de tu equipación. 
+    </p>
+    <p>
+    Para poder darte un presupuesto correcto necesitamos algo más información.
+    </p>
+    <p>
+    Al ser un problema de DAÑOS lo que necesitaríamos son fotos de las zonas dañadas para poder darte un presupuesto exacto.
+    </p>
+    <p>
+    Puedes responder a este email adjuntándolas.
+    </p>
+    <p>
+    Un saludo!
+    </p>
+    <p>
+    {{ $msg['problema'] }}
+    </p>
   </div>
  </body>
 </html>
