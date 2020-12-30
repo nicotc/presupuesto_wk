@@ -25,7 +25,7 @@ class PresupuestoTable extends Component
         )
         ->leftJoin('presupuesto_status', 'yIDN2_fv_entry_meta.data_id', '=', 'presupuesto_status.presupuesto_id')
         ->leftJoin('yIDN2_fv_enteries', 'yIDN2_fv_entry_meta.data_id', '=', 'yIDN2_fv_enteries.id')
-        ->orderByDesc('data_id')
+        ->orderByDesc('presupuesto_status_.id')
         ->get();
 
         $st[1] = "Sin Presupuestar";
