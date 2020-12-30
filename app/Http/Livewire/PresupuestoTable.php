@@ -51,13 +51,13 @@ class PresupuestoTable extends Component
         }
 
         ksort($Arr);
-dd($Arr);
+
         foreach ($Arr as $arr) {
             if(isset($arr['problema'])){
                 $row[] = $arr;
             }
         }
-
+        ksort($arr);
 
 
         $buscar = $this->buscar;
