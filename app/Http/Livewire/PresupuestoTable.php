@@ -49,9 +49,9 @@ class PresupuestoTable extends Component
             $Arr[$presupuesto['data_id']]['status_n'] = $presupuesto['status'];
             $Arr[$presupuesto['data_id']]['captured'] = $presupuesto['captured'];
         }
-        arsort($Arr);
 
 
+dd($Arr);
         foreach ($Arr as $arr) {
             if(isset($arr['problema'])){
                 $row[] = $arr;
