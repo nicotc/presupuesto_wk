@@ -10,6 +10,7 @@ class PresupuestoTable extends Component
 
     public $buscar = "";
 
+
     public function render()
     {
 
@@ -48,13 +49,15 @@ class PresupuestoTable extends Component
             $Arr[$presupuesto['data_id']]['status_n'] = $presupuesto['status'];
             $Arr[$presupuesto['data_id']]['captured'] = $presupuesto['captured'];
         }
+        arsort($Arr);
+
+
         foreach ($Arr as $arr) {
             if(isset($arr['problema'])){
                 $row[] = $arr;
             }
         }
 
-        arsort($row);
 
 
         $buscar = $this->buscar;
