@@ -57,7 +57,7 @@ class PresupuestoTable extends Component
                 $row[] = $arr;
             }
         }
-        ksort($arr);
+      
 
 
         $buscar = $this->buscar;
