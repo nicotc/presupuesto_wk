@@ -50,7 +50,7 @@ class PresupuestoTable extends Component
             $Arr[$presupuesto['data_id']]['captured'] = $presupuesto['captured'];
         }
 
-        asort($Arr);
+        ksort($Arr);
 dd($Arr);
         foreach ($Arr as $arr) {
             if(isset($arr['problema'])){
